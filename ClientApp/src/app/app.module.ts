@@ -6,11 +6,15 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    SideNavBarComponent,
+    AddCustomerComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -18,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      {path:'addCustomer', component:AddCustomerComponent}
     ])
   ],
   providers: [],
