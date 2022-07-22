@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
     HomeComponent,
     SideNavBarComponent,
     AddCustomerComponent,
+    AccountSettingsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -22,7 +24,8 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      {path:'addCustomer', component:AddCustomerComponent}
+      {path:'addCustomer', component:AddCustomerComponent},
+      {path:'account-settings', component:AccountSettingsComponent}
     ])
   ],
   providers: [],
